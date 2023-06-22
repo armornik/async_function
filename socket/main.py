@@ -79,6 +79,7 @@ def run():
     while True:
         # Получить отправленный клиентом пакет
         client_socket, addr = server_socket.accept()
+        # Получить сообщение от клиента
         request = client_socket.recv(1024)
         print(request)
         print()
