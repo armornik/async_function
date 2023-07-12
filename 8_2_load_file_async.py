@@ -1,5 +1,5 @@
 import asyncio
-import aiohttp  # Для работы с http (так как в asyncio только udp/tcp
+import aiohttp  # Для работы с http (так как в asyncio только udp/tcp)
 from time import time
 import os
 
