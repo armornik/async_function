@@ -93,5 +93,12 @@ as_completed - Чтобы получить результаты по мере в
 
 ##19 TaskGroup exceptions return_exceptions=True
 
+##20 gather cancel. Для перехвата и обработки используется asyncio.CancelledError
+task1 = asyncio.create_task(coro_norm(), name='Coro Norm')
+task1.get_name()
+task1._state}
+
+##2! TaskGroup cancel. Для перехвата и обработки используется asyncio.CancelledError
+
 
 Класс Task (asyncio.Task()) - это обертка вокруг корутины, которая планирует запуск этой корутины в событийном цикле. Так же позволяет отменять корутины, если, например, она выполняется слишком долго (без превращения корутины в задачу, её отменить не получится).
