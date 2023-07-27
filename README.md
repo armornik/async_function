@@ -96,7 +96,7 @@ as_completed - Чтобы получить результаты по мере в
 ##20 gather cancel. Для перехвата и обработки используется asyncio.CancelledError
 task1 = asyncio.create_task(coro_norm(), name='Coro Norm')
 task1.get_name()
-task1._state}
+task1._state
 
 ##21 TaskGroup cancel. Отмена происходит автоматически
 
@@ -105,5 +105,7 @@ task1._state}
 2. __anext__() возвращает значение на каждой итерации
 3. __anext__() возбуждает исключение StopAsyncIteration
 
+##22 async comprehensions (list, dict, set)
+faker - для создания фейковых данных
 
 Класс Task (asyncio.Task()) - это обертка вокруг корутины, которая планирует запуск этой корутины в событийном цикле. Так же позволяет отменять корутины, если, например, она выполняется слишком долго (без превращения корутины в задачу, её отменить не получится).
